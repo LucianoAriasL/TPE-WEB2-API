@@ -8,6 +8,7 @@ Una API REST sencilla para manejar un CRUD de zapatillas
 ## Pueba con postman
 El endpoint de la API es: http://localhost/TPE-WEB2-API/api/zapatillas
 
+## Metodos
    | Method | Url | Code | Default Response |
    |-:|--|:-:|:-|
    | GET | /zapatillas | 200 | Array<zapatillas> |
@@ -15,6 +16,15 @@ El endpoint de la API es: http://localhost/TPE-WEB2-API/api/zapatillas
    | POST | /zapatillas | 201 | zapatilla |
    | DELETE | /zapatillas/:ID | 200 | zapatilla |
 
+- Nota: para el POST se necesita el body en formato JSON para completar los datos de la zapatilla. Ej:
+   {
+   "nombre": "Ultraboost 22.0",
+   "marca": "Adidas",
+   "precio": 20450,
+   "descripcion": "Ideales para todo tipo de corredor",
+   "id_CategoriaDeZapatillas_fk": 1
+   }
+   
 ## SELECCIONAR DATOS A MOSTRAR
     Agregar query params a la solicitud GET:
     - /zapatillas?select=nombre
